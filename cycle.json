@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "about": null,
+  "tests": [],
+  "services": {
+    "loadbalancer": null,
+    "vpn": null
+  },
+  "containers": {
+    "hello": {
+      "name": "hello-world",
+      "image": {
+        "name": "hello-world",
+        "source": {
+          "repo": {
+            "dir": "/",
+            "build_file": "/Dockerfile",
+            "url": "https://github.com/aubuchcl/qa_hello_world.git",
+            "protocol": "https"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "disable",
+          "hostname": "hello",
+          "ports": []
+        },
+        "deploy": {
+          "instances": 1,
+          "constraints": null,
+          "shutdown": null,
+          "restart": null,
+          "health_check": null
+        },
+        "scaling": null,
+        "runtime": null,
+        "resources": null,
+        "integrations": null
+      },
+      "annotations": {}
+    }
+  }
+}
